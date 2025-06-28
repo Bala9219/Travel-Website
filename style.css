@@ -1,0 +1,196 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Eungee+Tint&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: "Baskervville SC", system-ui;
+}
+.header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #00CFFD;
+}
+
+.header.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #00afd1;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon_area{
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon_name{
+    font-weight: bolder;
+}
+
+.menu_area{
+    margin-right: 10px;
+}
+
+li{
+    padding: 5px;
+    border-radius: 2px;
+    transition: transform 0.5s, background-color 0.5s;
+}
+
+li:hover{
+    transform: scale(1.1);
+    background-color: aliceblue;
+    border-bottom: 2px solid red;
+    cursor: pointer;
+}
+
+.main_content{
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main_heading{
+    font-family: "Bungee Tint", system-ui;
+    color: red;
+    
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-evenly;
+}
+
+.services_heading{
+    text-align: center;
+}
+
+.card1, .card2, .card3, .card_img1, .card_img2, .card_img3{
+    max-width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.about_us{
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: aliceblue;
+    justify-content: space-evenly;  
+    margin-top: 20px;
+}
+
+.about_img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.about_text{
+    max-width: 500px;
+    text-align: justify;
+}
+
+.gallery {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery_text {
+    font-size: 2 rem;
+    margin-bottom: 2rem;
+}
+
+.gallery_layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.side img,
+.center img {
+    width: 100%;
+    max-width: 100%;
+    transition: transform 1s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.side {
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.footer{
+    text-align: center;
+    background-color: rgb(54, 28, 28);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 700px) {
+    .gallery{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .about_text{
+        padding: 10px;
+    }
+    .card1, .card2, .card3{
+        margin-bottom: 10px;
+    }
+    .gallery_text{
+        position: static;
+        margin-top: 10px;
+    }
+}
